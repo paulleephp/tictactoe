@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/tictactoe.css" />
+  </head>
+  <script></script>
+  <body>
+    <div id="tictactoe">
+      <div class="span3 grid-container">
+        <div class="row">
+          <h1 class="span3">Tic Tac Toe</h1>
+        </div><!--row-->
+
+        <ul class="row" id="grid">
+          <li id="js_0" class="btn span1 disabled" data-index="0">&nbsp;</li>
+          <li id="js_1" class="btn span1 disabled" data-index="1">&nbsp;</li>
+          <li id="js_2" class="btn span1 disabled" data-index="2">&nbsp;</li>
+          <li id="js_3" class="btn span1 disabled" data-index="3">&nbsp;</li>
+          <li id="js_4" class="btn span1 disabled" data-index="4">&nbsp;</li>
+          <li id="js_5" class="btn span1 disabled" data-index="5">&nbsp;</li>
+          <li id="js_6" class="btn span1 disabled" data-index="6">&nbsp;</li>
+          <li id="js_7" class="btn span1 disabled" data-index="7">&nbsp;</li>
+          <li id="js_8" class="btn span1 disabled" data-index="8">&nbsp;</li>
+        </ul>
+
+        <div id="message" class="clr">&nbsp;</div>
+        <div class="row">
+          <a href="#" id="start" class="btn-success btn span2" >Start</a>
+        </div>
+        <div class="clr">&nbsp;</div>
+
+        <!-- dropdowns -->
+        <div class="row">Player X
+          <select id="X">
+            <option selected="selected" data-type="human">Human</option>
+            <option data-type="bot">Bot</option>
+          </select>
+        </div>
+        <div class="row">Player O
+          <select id="O">
+            <option data-type="human">Human</option>
+            <option data-type="bot" selected="selected">Bot</option>
+          </select>
+        </div>
+
+      </div><!--grid_container-->
+    </div><!--tictactoe-->
+  </body>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/tictactoe.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/tictactoe-game.js"></script>
+</html>

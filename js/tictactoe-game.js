@@ -8,16 +8,18 @@ $(document).ready(function() {
     function init(){
         playerX = $('#X :selected').data('type');
         playerO = $('#O :selected').data('type');
+
+        if(playerX =='bot' && playerO == 'bot'){
+            disableButtons();
+            $('#message').text('Game Mode not Supported');
+            alert('Bot vs Bot mode not enabled. Please choose at least 1 human player.');
+        }
+
         game = new Game();
         game.init(playerX, playerO);
 
         if(playerX == 'bot' && playerO == 'human'){
             game.letBotMoveProceed(function(current_turn, index){
-                updateDisplay(current_turn, index);
-            });
-        }
-        if(playerX =='bot' && playerO == 'bot'){
-            game.botVSBot(function(current_turn, index){
                 updateDisplay(current_turn, index);
             });
         }
